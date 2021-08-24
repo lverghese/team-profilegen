@@ -1,0 +1,25 @@
+{
+  "name": "team-profilegen",
+  "version": "1.0.0",
+  "description": "Profile Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lverghese/team-profilegen.git"
+  },
+  "author": "Logan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lverghese/team-profilegen/issues"
+  },
+  "homepage": "https://github.com/lverghese/team-profilegen#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}
