@@ -28,3 +28,4 @@ test('gets the employees email', () => {
 
     expect(employee.getTheEmail()).toEqual(expect.any(String))
 })
+
