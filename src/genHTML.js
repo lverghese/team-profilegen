@@ -1,3 +1,9 @@
+
+
+
+
+
+//plugs in the cards into the html
 const genTeamHtml = function () {
   return  ` <!DOCTYPE html>
   <html lang="en">
@@ -33,7 +39,7 @@ const genTeamHtml = function () {
     </html>
   `;
 
-  
+
   }
   
   
