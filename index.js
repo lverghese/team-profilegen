@@ -81,8 +81,50 @@ const newManager = () => {
 const newEmployee = () => {
     return inquirer.prompt ([
         {
-            
-        }
+            type: 'list',
+            name: 'role',
+            message: "Please choose your employee's role",
+            choices: ['Engineer', 'Intern']
+        },
+        {
+            type: "input",
+            name: 'name',
+            message: 'What is the name of your employee?', 
+                validate: nameInput => {
+                    if (nameInput) {
+                      return true;
+                    } else {
+                        console.log ("Please enter the employee's name.");
+                        return false; 
+                    }
+                }
+        },
+        {
+            type: "input",
+            name: 'id',
+            message: "What is the employee's id number?", 
+                validate: idInput => {
+                    if (isNaN(idInput)) {
+                        console.log ("Please enter the employee's valid ID.");
+                        return false; 
+                    } else {
+                       return true;
+                    }
+                }
+        },
+        {
+            type: "input",
+            name: 'email',
+            message: "What is the employee's email?", 
+                validate: emailInput => {
+                    if (emailInput) {
+                      return true;
+                    } else {
+                        console.log ("Please enter the manager's valid email.");
+                        return false; 
+                    }
+                }
+            },
 
     ])
 }
