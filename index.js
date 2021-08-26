@@ -77,3 +77,12 @@ const newManager = () => {
     })
 };
 
+
+const newEmployee = () => {
+    return inquirer.prompt ([
+        {
+            
+        }
+
+    ])
+}
