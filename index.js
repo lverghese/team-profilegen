@@ -125,6 +125,34 @@ const newEmployee = () => {
                     }
                 }
             },
+            {
+            type: "input",
+            name: 'github',
+            message: "What is the employee's github username?", 
+                validate: gitInput => {
+                    if (gitInput) {
+                      return true;
+                    } else {
+                        console.log ("Please enter the employee's valid github username.");
+                        return false; 
+                    }
+                }
+            },
+            {
+            type: 'input',
+            name: 'school',
+            message: "Please enter the intern's school",
+            //only adds school if it is an intern
+            when: (input) => input.role === "Intern",
+            validate: uniInput => {
+                if (uniInput) {
+                    return true;
+                } else {
+                    console.log ("Please enter the intern's school!")
+                }
+            }
+        },
+            
 
     ])
 }
