@@ -11,7 +11,6 @@ const Engineer = require('./lib/Engineer');
 const arrayForTeam = [];
 
 const newManager = () => {
-    const promptUser = () => {
         return inquirer.prompt([
             {
             type: "input",
@@ -78,7 +77,3 @@ const newManager = () => {
     })
 };
 
-
-
-
-}
