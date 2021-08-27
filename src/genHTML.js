@@ -1,4 +1,24 @@
+//CARDS FOR EMPLOYEES 
+const genManager = function(manager) {
+    return `
+    <div class="col-4 mt-5">
+        <div class="card h-100">
+            <div class="card-header">
+                <h2>${manager.name}</h2>
+                <h3>Manager</h3><i class="material-icons">perm_identity</i>
+            </div>
 
+            <div class="card-body">
+                <p class="id">ID: ${manager.id}</p>
+                <p class="office">Office Number: ${manager.office}</p>
+                <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    `;
+}
 
 
 

@@ -198,4 +198,28 @@ const newEmployee = () => {
     })
 };
 
+//function to write html file
 
+const writeFile = allData => {
+    fs.writeFile('./dist/index.html', allData, err => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("Check out the team profiles in index.html!")
+        }
+    })
+};
+
+
+newManager()
+.then(newEmployee)
+.then(employeeArray => {
+    return genHTML(employeeArray);
+})
+.then(siteHtml => {
+    return writeFile(siteHtml);
+})
+.catch(err => {
+    console.log(err)
+});
