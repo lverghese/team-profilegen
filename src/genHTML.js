@@ -26,7 +26,7 @@ const genIntern = function(intern) {
         <div class="card h-100">
             <div class="card-header">
                 <h2>${intern.name}</h2>
-                <h3>Manager</h3><i class="material-icons">perm_identity</i>
+                <h3>Intern</h3><i class="material-icons">perm_identity</i>
             </div>
 
             <div class="card-body">
@@ -46,7 +46,7 @@ const genEngineer = function(engineer) {
         <div class="card h-100">
             <div class="card-header">
                 <h2>${engineer.name}</h2>
-                <h3>Manager</h3><i class="material-icons">perm_identity</i>
+                <h3>Engineer</h3><i class="material-icons">perm_identity</i>
             </div>
 
             <div class="card-body">
@@ -96,7 +96,7 @@ genHTML = (allData) => {
 
     //gives back to the genTeamHtml
     const genTeam = genTeamHtml(allCards);
-    return genTeamHtml;
+    return genTeam;
 }
 
 
