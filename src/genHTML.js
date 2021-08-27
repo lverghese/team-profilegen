@@ -61,11 +61,49 @@ const genEngineer = function(engineer) {
     `;
 };
 
+//grabs employeeArray and pushes to site
+genHTML = (allData) => {
+
+    //card array for html
+    cardArray = [];
+
+    for (let i = 0; i < allData.length; i++) {
+        const employee = allData[i];
+        const role = employee.getTheRole();
+
+
+        if (role === 'Manager') {
+            const manCard = genManager(employee);
+
+            cardArray.push(manCard);
+        }
+
+        if (role === 'Intern') {
+            const intCard = genIntern(employee);
+
+            cardArray.push(intCard);
+        }
+
+        if (role === 'Engineer') {
+            const engCard = genEngineer(employee);
+
+            cardArray.push(engCard);
+        }
+    }
+
+    //puts them together with join
+    const allCards = cardArray.join('')
+
+    //gives back to the genTeamHtml
+    const genTeam = genTeamHtml(allCards);
+    return genTeamHtml;
+}
+
 
 
 
 //plugs in the cards into the html
-const genTeamHtml = function () {
+const genTeamHtml = function (allCards) {
   return  ` <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -87,7 +125,8 @@ const genTeamHtml = function () {
 <main>
     <div class="container">
         <div class="row justify-content-center" id="team-cards">
-            <!--Team Profile Cards-->
+            <!--Team Profile Cards are going to go here when functions are made-->
+            ${allCards}
 
         </div>
     </div>
