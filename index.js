@@ -1,3 +1,6 @@
+const genHTML = require('./src/genHTML');
+
+
 const fs = require('fs');
 const inquirer = require('inquirer');
 
@@ -8,7 +11,7 @@ const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 
 //need an array to hold the team
-const arrayForTeam = [];
+const employeeArray = [];
 
 const newManager = () => {
         return inquirer.prompt([
@@ -73,7 +76,7 @@ const newManager = () => {
         const manager = new Manager (name, id, email, office);
 
         //pushes this new manager input to the array
-        arrayForTeam.push(manager);
+        employeeArray.push(manager);
     })
 };
 
@@ -152,7 +155,47 @@ const newEmployee = () => {
                 }
             }
         },
+
+        //asking if they can continue adding employees
+        {
+            type: "confirm",
+            name: 'anotherEmployee',
+            message: "Do you want to continure adding employees?",
+            default: false
+        }
             
 
     ])
-}
+    //need an object for the employee types and their data
+    .then(employeeStuff => {
+
+        let {name, id, email, role, github, uni, anotherEmployee} = employeeStuff
+        
+        //using let so the employee can changed based on role
+        let employee;
+
+        if (role === 'Intern') {
+            employee = new Intern (name, id, email, uni);
+
+            console.log(employee)
+
+        } else if (role === 'Engineer') {
+            employee = new Engineer (name, id, email, github)
+
+            console.log(employee)
+        }
+
+        employeeArray.push(employee);
+
+        //if they choose to add more employees
+        if (anotherEmployee) {
+            return newEmployee(employeeArray);
+        } else {
+            return employeeArray;
+        }
+
+
+    })
+};
+
+

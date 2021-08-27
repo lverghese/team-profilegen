@@ -42,6 +42,8 @@ const genTeamHtml = function () {
 
   }
   
+
+  module.exports = genHTML;
   
   
   
