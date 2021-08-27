@@ -3,7 +3,7 @@ const genManager = function(manager) {
     return `
     <div class="col-4 mt-5">
         <div class="card h-100">
-            <div class="card-header">
+            <div class="card-header bg-primary text-light">
                 <h2>${manager.name}</h2>
                 <h3>Manager</h3><i class="material-icons">perm_identity</i>
             </div>
@@ -24,9 +24,9 @@ const genIntern = function(intern) {
     return `
     <div class="col-4 mt-5">
         <div class="card h-100">
-            <div class="card-header">
+            <div class="card-header bg-primary text-light">
                 <h2>${intern.name}</h2>
-                <h3>Intern</h3><i class="material-icons">perm_identity</i>
+                <h3>Intern</h3><i class="material-icons">transfer_within_a_station</i>
             </div>
 
             <div class="card-body">
@@ -44,14 +44,14 @@ const genEngineer = function(engineer) {
     return `
     <div class="col-4 mt-5">
         <div class="card h-100">
-            <div class="card-header">
+            <div class="card-header bg-primary text-light">
                 <h2>${engineer.name}</h2>
-                <h3>Engineer</h3><i class="material-icons">perm_identity</i>
+                <h3>Engineer</h3><i class="material-icons">build</i>
             </div>
 
             <div class="card-body">
                 <p class="id">ID: ${engineer.id}</p>
-                <p class="github">: ${engineer.github}</p>
+                <p class="github">GitHub Username: ${engineer.github}</p>
                 <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
             </div>
 
@@ -118,8 +118,8 @@ const genTeamHtml = function (allCards) {
   </head>
     <body>
     <header>
-    <nav class="navbar" id="navbar">
-        <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">The Whole Team</span>
+    <nav class="navbar bg-danger text-light" id="navbar">
+        <span class="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">Your Whole Team!</span>
     </nav>
 </header>
 <main>

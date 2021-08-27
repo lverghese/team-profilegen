@@ -143,7 +143,7 @@ const newEmployee = () => {
             },
             {
             type: 'input',
-            name: 'school',
+            name: 'uni',
             message: "Please enter the intern's school",
             //only adds school if it is an intern
             when: (input) => input.role === "Intern",
