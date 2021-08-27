@@ -23,5 +23,8 @@ Run "node index.js" to cue the inquirer prompts to answer, follow along and at t
 ## Tests
 Run "npm run test" to run Jest for tests on all of the constructors at once.
 
+## Video Demo
+https://youtu.be/YEq0CRVfyV8
+
 ## Questions
 If you have any questions about this projects, please contact me at loganverghese@gmail.com.
