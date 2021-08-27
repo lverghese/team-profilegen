@@ -18,7 +18,48 @@ const genManager = function(manager) {
     </div>
 
     `;
-}
+};
+
+const genIntern = function(intern) {
+    return `
+    <div class="col-4 mt-5">
+        <div class="card h-100">
+            <div class="card-header">
+                <h2>${intern.name}</h2>
+                <h3>Manager</h3><i class="material-icons">perm_identity</i>
+            </div>
+
+            <div class="card-body">
+                <p class="id">ID: ${intern.id}</p>
+                <p class="uni">University: ${intern.uni}</p>
+                <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    `;
+};
+const genEngineer = function(engineer) {
+    return `
+    <div class="col-4 mt-5">
+        <div class="card h-100">
+            <div class="card-header">
+                <h2>${engineer.name}</h2>
+                <h3>Manager</h3><i class="material-icons">perm_identity</i>
+            </div>
+
+            <div class="card-body">
+                <p class="id">ID: ${engineer.id}</p>
+                <p class="github">: ${engineer.github}</p>
+                <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    `;
+};
 
 
 
